@@ -1,16 +1,16 @@
 /*--------------- NAVIGATION BAR FUNCTION -----------*/
-function myMenuFunction(){
+function myMenuFunction() {
     var menuBtn = document.getElementById("myNavMenu");
 
-    if(menuBtn.className === "nav-menu"){
-        menuBtn.className +=" responsive";
-    }else {
+    if (menuBtn.className === "nav-menu") {
+        menuBtn.className += " responsive";
+    } else {
         menuBtn.className = "nav-menu";
     }
 }
 
 /*--------------- Add shodow on navigatoion bar while scrolling----------*/
-window.onscroll = function() {headerShadow()};
+window.onscroll = function () { headerShadow() };
 
 function headerShadow() {
     const navHeader = document.getElementById("header");
@@ -25,45 +25,48 @@ function headerShadow() {
         navHeader.style.boxShadow = "none";
         navHeader.style.height = "90px";
         navHeader.style.lineHeight = "90px";
-        
+
     }
 }
 
 /*--------------- TYPING EFFECTS----------*/
 
-var typingEffect = new Typed(".typedText",{
-    strings : ["Designer", "Youtuber", "Developer", "TikToker"],
-    loop : true,
-    typeSpeed : 100,
-    bacSpeed : 80,
-    backDelay : 2000,
+var typingEffect = new Typed(".typedText", {
+    strings: ["Cybersecurity Specialist", "Backend Developer", "Designer", "Youtuber", "TikToker"],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 80,
+    backDelay: 2000,
 })
 
 /*--------------- TYPING EFFECTS----------*/
 const sr = ScrollReveal({
-       origin: 'top',
-       distance: '80px',
-       duration: 2000,
-       reset: true,
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true,
 })
 
 /*--------------- HOME----------*/
-sr.reveal('.featured-text-card',{})
-sr.reveal('.featured_name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
-sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
+sr.reveal('.featured-text-card', {})
+sr.reveal('.featured_name', { delay: 100 })
+sr.reveal('.featured-text-info', { delay: 200 })
+sr.reveal('.featured-text-btn', { delay: 200 })
+sr.reveal('.social_icons', { delay: 200 })
+sr.reveal('.featured-image', { delay: 300 })
 
 
 
 
 /*--------------- PROJECT BOX----------*/
-sr.reveal('.prroject-box',{interval: 200})
+sr.reveal('.prroject-box', { interval: 200 })
 
 
 /*--------------- HEADINGS---------*/
-sr.reveal('.top-header',{})
+sr.reveal('.top-header', {})
+
+/*--------------- CERTIFICATION BOX----------*/
+sr.reveal('.cert-card', { interval: 200 })
 
 
 /*--------------- --##--- scroll reveal left-right animation ---##-- --------*/
@@ -76,10 +79,10 @@ const srLeft = ScrollReveal({
     duration: 2000,
     reset: true,
 })
-srLeft.reveal('.about-text',{delay:100})
-srLeft.reveal('.about-texts',{delay:200})
-srLeft.reveal('.about-card',{delay: 100})
-sr.reveal('.about_details',{delay: 100})
+srLeft.reveal('.about-text', { delay: 100 })
+srLeft.reveal('.about-texts', { delay: 200 })
+srLeft.reveal('.about-card', { delay: 100 })
+sr.reveal('.about_details', { delay: 100 })
 
 /*--------------- About skills & form box-------*/
 const srRight = ScrollReveal({
@@ -89,22 +92,22 @@ const srRight = ScrollReveal({
     reset: true,
 })
 
-srLeft.reveal('.about-card',{delay: 100})
-sr.reveal('.form-control',{delay: 100})
+srLeft.reveal('.about-card', { delay: 100 })
+sr.reveal('.form-control', { delay: 100 })
 
 /*--------------- CHANGE ACTIVE LINK-------*/
 const sections = document.querySelectorAll('section[id]')
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.scrollY;
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
-          sectionTop = current.offTop - 50,
-        sectionid= current.getAttribute('id');
+            sectionTop = current.offTop - 50,
+            sectionid = current.getAttribute('id');
 
 
 
-        if(scrollY = sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (scrollY = sectionTop && scrollY <= sectionTop + sectionHeight) {
 
 
             document.querySelector('.nav-menu a[href*=' + sectionid + ']').classList.add('active-link')
@@ -122,7 +125,7 @@ function scrollActive(){
 
 
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded: Script started.');
     console.log('servicesData (from data.js):', servicesData);
 
@@ -202,7 +205,7 @@ function scrollActive(){
 
         if (selectedService) {
             updateContent(selectedService);
-            srLeft.reveal('.description', {delay:100})
+            srLeft.reveal('.description', { delay: 100 })
         } else {
             console.error(`Error: Service with ID "${id}" not found in servicesData.`);
             if (contentTitle) contentTitle.textContent = 'Service Details Not Available';

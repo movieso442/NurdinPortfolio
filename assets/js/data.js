@@ -1,5 +1,46 @@
 const servicesData = [
     {
+        id: 'cybersecurity',
+        name: 'Cybersecurity',
+        icon: 'uil uil-shield-check',
+        projectCount: '15 projects',
+        description: `
+            As a cybersecurity specialist, I focus on protecting digital assets, networks, and systems from unauthorized access, attacks, and vulnerabilities. 
+            I am experienced in performing security audits, penetration testing, and implementing robust security protocols to ensure data integrity and confidentiality.
+
+            My expertise includes network security, application security, and incident response. I use industry-standard tools for vulnerability scanning, 
+            threat detection, and ethical hacking. I also focus on security awareness and best practices for developers and organizations.
+
+            I have worked on securing web applications, configuring firewalls, and implementing encryption standards. My goal is to stay ahead of 
+            emerging threats and provide proactive security solutions that mitigate risks and protect users in an ever-evolving digital landscape.
+
+            Additionally, I focus on compliance standards, security architecture, and continuous monitoring to maintain a high security posture 
+            for all digital platforms I work on.
+        `,
+        demoLink: '#'
+    },
+    {
+        id: 'backend',
+        name: 'BackEnd',
+        icon: 'uil uil-server',
+        projectCount: '08 projects',
+        description: `
+            I am an experienced backend developer with strong expertise in server-side technologies including PHP, Java, C++, Node.js, and frameworks such as 
+            Laravel and Express. I build secure, efficient, and scalable backend systems that form the foundation of high-performing web and mobile applications.
+
+            My skills include database design and management (MySQL, PostgreSQL, MongoDB), RESTful and GraphQL API development, 
+            user authentication systems, session management, and cloud integrations. Whether it's designing relational schemas or 
+            handling data-heavy operations, my backend logic ensures robustness and reliability.
+
+            I’ve created systems for inventory tracking, order management, CRM, and billing platforms, always focusing on modular code 
+            and performance optimization. I use best practices in security, including input validation, encryption, and safe error handling, 
+            to protect sensitive data and user privacy.
+
+            I also implement CI/CD pipelines, containerization (Docker), and version control (Git), supporting modern DevOps practices for smoother deployments and code quality assurance.
+        `,
+        demoLink: '#'
+    },
+    {
         id: 'frontend',
         name: 'FrontEnd',
         icon: 'uil uil-desktop',
@@ -15,25 +56,6 @@ const servicesData = [
 
             Additionally, I focus on reusable component design, mobile-first principles, and continuous improvement through testing and analytics.
             I collaborate closely with designers and product owners to iterate quickly and deliver quality interfaces that solve real-world problems.
-        `,
-        demoLink: '#'
-    },
-    {
-        id: 'backend',
-        name: 'BackEnd',
-        description: `
-            I am an experienced backend developer with strong expertise in server-side technologies including PHP, Java, C++, Node.js, and frameworks such as 
-            Laravel and Express. I build secure, efficient, and scalable backend systems that form the foundation of high-performing web and mobile applications.
-
-            My skills include database design and management (MySQL, PostgreSQL, MongoDB), RESTful and GraphQL API development, 
-            user authentication systems, session management, and cloud integrations. Whether it's designing relational schemas or 
-            handling data-heavy operations, my backend logic ensures robustness and reliability.
-
-            I’ve created systems for inventory tracking, order management, CRM, and billing platforms, always focusing on modular code 
-            and performance optimization. I use best practices in security, including input validation, encryption, and safe error handling, 
-            to protect sensitive data and user privacy.
-
-            I also implement CI/CD pipelines, containerization (Docker), and version control (Git), supporting modern DevOps practices for smoother deployments and code quality assurance.
         `,
         demoLink: '#'
     },
@@ -54,26 +76,6 @@ const servicesData = [
 
             With a strong understanding of MVC/MVVM architectures and agile project management, I can lead or contribute to full product cycles — from ideation to launch.
             I believe in clean code, clear documentation, and collaborative development, making me a reliable contributor to any technical team.
-        `,
-        demoLink: '#'
-    },
-    {
-        id: 'graphics',
-        name: 'Graphics Design',
-        icon: 'uil uil-desktop',
-        projectCount: '50 projects',
-        description: `
-            Graphic design is where I combine creativity with visual storytelling to help businesses stand out and connect with their audience. 
-            I create logos, banners, flyers, business cards, and brochures that not only look great but also align with brand identity and strategy.
-
-            My design approach is deeply rooted in psychology, layout balance, and color theory to produce designs that resonate emotionally and visually. 
-            I use tools like Adobe Illustrator, Photoshop, Figma, and Canva to deliver high-quality designs for both print and digital mediums.
-
-            Over the years, I have delivered branding kits, social media visuals, pitch decks, and product mockups for startups, NGOs, and established businesses.
-            I understand how to maintain consistency across platforms, ensuring brand recognition and trust.
-
-            Whether it's for marketing campaigns, product packaging, or UI/UX elements, my design work enhances perception and drives results. 
-            I’m committed to timely delivery, revisions, and ensuring each design has a purpose beyond aesthetics — it tells a story and drives action.
         `,
         demoLink: '#'
     }

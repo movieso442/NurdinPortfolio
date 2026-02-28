@@ -1,0 +1,3 @@
+id,user_id,lesson_id,submission_type,content,feedback,status,submitted_at
+e50e8400-e29b-41d4-a716-446655440001,550e8400-e29b-41d4-a716-446655440001,f50e8400-e29b-41d4-a716-446655440001,link,https://github.com/admin/lab-solution,Great work!,approved,2026-02-28T14:00:00Z
+e50e8400-e29b-41d4-a716-446655440002,550e8400-e29b-41d4-a716-446655440002,f50e8400-e29b-41d4-a716-446655440001,text,I completed the basic setup.,Please add more comments.,reviewed,2026-02-28T15:00:00Z

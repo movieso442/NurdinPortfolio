@@ -1,0 +1,3 @@
+id,user_id,highest_education,field_of_study,occupation,experience_level,github_link,device_type,internet_reliability,motivation,goals,commitment_hours,previous_training,referral_source,admin_notes,created_at
+b50e8400-e29b-41d4-a716-446655440001,550e8400-e29b-41d4-a716-446655440001,Bachelor's,Computer Science,Full-time Student,Intermediate,https://github.com/johndoe,Laptop (MacBook),High,Looking to master cybersecurity.,Become a security engineer.,20,None,LinkedIn,,2026-02-28T10:00:00Z
+b50e8400-e29b-41d4-a716-446655440002,550e8400-e29b-41d4-a716-446655440002,Master's,Information Systems,Employee,Junior,https://github.com/janesmith,Desktop PC,Medium,Deepen my knowledge.,Advance in my career.,15,One online course,Friend referral,,2026-02-28T11:00:00Z

@@ -1558,3 +1558,80 @@ textarea{
         margin-bottom: 0.3rem; /* Space between icon and text when stacked */
     }
 }
+
+/* --------------------CERTIFICATION SECTION ------------- */
+
+.certification-section {
+    padding-block: 5em;
+    background: var(--body-color);
+}
+
+.certification-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 3rem;
+    padding-inline: 2vw;
+}
+
+.cert-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px 12px 20px 4px var(--first-shadow-color);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    color: var(--second-color);
+    margin-bottom: 20px;
+}
+
+.cert-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cert-card p {
+    font-size: 0.9rem;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+.cert-card .view-cert-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.cert-card .view-cert-btn:hover {
+    background: var(--first-color-hover);
+}
+
+/* Responsive for Certification */
+@media (max-width: 1024px) {
+    .certification-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .certification-container {
+        grid-template-columns: 1fr;
+    }
+}

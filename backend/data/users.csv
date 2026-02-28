@@ -1,0 +1,4 @@
+id,name,email,password_hash,role,institution_id,created_at,first_name,last_name,username,phone,age,country,application_status
+550e8400-e29b-41d4-a716-446655440000,System Admin,admin@nurdine.academy,$2a$10$R9h/lIPzHZ7hJL1VPy.HFe6.E9.RTPqH.L2P.H2P.H2P.H2P.H2P,admin,,2026-02-28T00:00:00Z,System,Admin,admin,+123456789,30,USA,APPROVED
+550e8400-e29b-41d4-a716-446655440001,John Doe,john.doe@example.com,$2a$10$R9h/lIPzHZ7hJL1VPy.HFe6.E9.RTPqH.L2P.H2P.H2P.H2P.H2P,student,,2026-02-28T10:00:00Z,John,Doe,johndoe,+198765432,25,UK,APPROVED
+550e8400-e29b-41d4-a716-446655440002,Jane Smith,jane.smith@example.com,$2a$10$R9h/lIPzHZ7hJL1VPy.HFe6.E9.RTPqH.L2P.H2P.H2P.H2P.H2P,student,,2026-02-28T11:00:00Z,Jane,Smith,janesmith,+112233445,22,Canada,PENDING

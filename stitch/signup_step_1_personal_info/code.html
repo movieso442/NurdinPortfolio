@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6e57e0",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141220",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<title>Signup Step 1: Personal Info | Nurdine Learning</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Left Side: Fixed Stepper Sidebar -->
+<aside class="w-1/3 max-w-sm bg-white dark:bg-slate-900 border-r border-primary/10 flex flex-col p-12">
+<div class="mb-12 flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Nurdine</h2>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Step 1: Active -->
+<div class="flex items-start gap-4 group">
+<div class="relative flex flex-col items-center">
+<div class="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white ring-4 ring-primary/20">
+<span class="material-symbols-outlined text-xl">person</span>
+</div>
+<div class="absolute top-10 h-12 w-px bg-slate-200 dark:bg-slate-700 mt-2"></div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-sm font-bold text-primary uppercase tracking-wider">Step 1</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Personal Information</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Basic details for your account</p>
+</div>
+</div>
+<!-- Step 2: Inactive -->
+<div class="flex items-start gap-4 opacity-50">
+<div class="relative flex flex-col items-center">
+<div class="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-400">
+<span class="material-symbols-outlined text-xl">history_edu</span>
+</div>
+<div class="absolute top-10 h-12 w-px bg-slate-200 dark:bg-slate-700 mt-2"></div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-sm font-bold text-slate-400 uppercase tracking-wider">Step 2</p>
+<h3 class="text-lg font-bold text-slate-400">Academic History</h3>
+<p class="text-sm text-slate-400 mt-1">Educational background</p>
+</div>
+</div>
+<!-- Step 3: Inactive -->
+<div class="flex items-start gap-4 opacity-50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-400">
+<span class="material-symbols-outlined text-xl">emoji_objects</span>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-sm font-bold text-slate-400 uppercase tracking-wider">Step 3</p>
+<h3 class="text-lg font-bold text-slate-400">Statement of Purpose</h3>
+<p class="text-sm text-slate-400 mt-1">Your goals and motivation</p>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-xs font-medium text-primary/80 mb-2">Need help?</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">Our admissions team is here to guide you through the process.</p>
+<a class="inline-block mt-3 text-sm font-bold text-primary hover:underline" href="#">Contact Support</a>
+</div>
+</div>
+</aside>
+<!-- Right Side: Form Content -->
+<main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-background-dark p-8 md:p-16">
+<div class="max-w-3xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Create your student profile</h1>
+<p class="text-slate-500 dark:text-slate-400">Please provide your basic details to start your application for the upcoming semester.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- First Name -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="first_name">First Name</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="first_name" placeholder="e.g. Alexander" type="text"/>
+</div>
+<!-- Last Name -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="last_name">Last Name</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="last_name" placeholder="e.g. Hamilton" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Username -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="username">Username</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="username" placeholder="ahamilton_edu" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="email">Email Address</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-symbols-outlined text-lg">mail</span>
+</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="email" placeholder="alexander@domain.com" type="email"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Phone -->
+<div class="md:col-span-1">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="phone">Phone Number</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<!-- Age -->
+<div class="md:col-span-1">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="age">Age</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="age" placeholder="18" type="number"/>
+</div>
+<!-- Country -->
+<div class="md:col-span-1">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="country">Country</label>
+<select class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-600 dark:text-slate-300" id="country">
+<option value="us">United States</option>
+<option value="uk">United Kingdom</option>
+<option value="ca">Canada</option>
+<option value="au">Australia</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Password -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="password">Password</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="password" placeholder="••••••••" type="password"/>
+<!-- Password Strength Meter -->
+<div class="mt-3">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] font-bold uppercase text-slate-400">Password Strength</span>
+<span class="text-[10px] font-bold text-primary">Medium</span>
+</div>
+<div class="flex gap-1 h-1">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="confirm_password">Confirm Password</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="confirm_password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="pt-8 flex items-center justify-between border-t border-slate-100 dark:border-slate-800">
+<p class="text-sm text-slate-500">Already have an account? <a class="text-primary font-bold hover:underline" href="#">Sign In</a></p>
+<button class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-lg shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02] active:scale-95" type="submit">
+                                Continue
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<div class="mt-8 flex justify-center gap-12 opacity-40 grayscale group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-widest">Secure Enrollment</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">lock</span>
+<span class="text-xs font-bold uppercase tracking-widest">Privacy Protected</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">description</span>
+<span class="text-xs font-bold uppercase tracking-widest">GDPR Compliant</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
