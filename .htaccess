@@ -1,5 +1,8 @@
 Options -Indexes
 
+AddType image/x-icon .ico
+AddType application/manifest+json .webmanifest
+
 <FilesMatch "^\.env">
     Require all denied
 </FilesMatch>
