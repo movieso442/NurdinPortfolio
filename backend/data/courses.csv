@@ -1,4 +1,0 @@
-id,title,description,price,is_mentorship,created_at,institution_id
-a50e8400-e29b-41d4-a716-446655440101,Advanced Cybersecurity Defense,Master proactive protection strategies and incident response for enterprise environments.,499.00,false,2026-02-28T00:00:00Z,
-a50e8400-e29b-41d4-a716-446655440102,Full-Stack Engineering Masterclass,Level up your development skills with modern architecture, scalable systems, and DevOps essentials.,299.00,false,2026-02-28T00:00:00Z,
-a50e8400-e29b-41d4-a716-446655440103,Cloud Architecture & Security,Learn to design, deploy, and secure complex cloud infrastructures on AWS and Azure.,399.00,false,2026-02-28T00:00:00Z,

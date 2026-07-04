@@ -4,18 +4,19 @@
 /* variables */
 
 :root{
-    --body-color: rgb(250, 250, 250);
+    /* CyberNurdin brand palette */
+    --body-color: rgb(250, 250, 248);
     --color-white: rgb(255, 255, 255);
 
-    --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171);
+    --text-color-second: rgb(23, 37, 54);   /* Deep Cyber Navy - body text */
+    --text-color-third: rgb(11, 61, 119);   /* Cyber Blue - typed text / nav name */
 
-    --first-color: rgb(110, 87, 224);
-    --first-color-hover: rgb(40, 91, 212);
+    --first-color: rgb(11, 61, 119);        /* Cyber Blue - primary accent */
+    --first-color-hover: rgb(6, 28, 54);    /* Deep Cyber Navy - hover state */
 
-    --second-color: rgb(0, 201, 225);
-    --third-color: rgb(192, 166, 49);
-    --first-shadow-color:  rgba(0, 0, 0, 0.1);
+    --second-color: rgb(249, 87, 56);       /* Signal accent - interactive highlight */
+    --third-color: rgb(245, 211, 94);       /* Gold accent - badges/borders */
+    --first-shadow-color:  rgba(6, 28, 54, 0.1);
 }
 
 /* ----- BASE------ */
@@ -31,6 +32,21 @@ a{
 /* ---------SMOOTH SCROOL----------- */
 html{
     scroll-behavior: smooth;
+}
+
+/* ----- RESPECT REDUCED MOTION ------ */
+@media (prefers-reduced-motion: reduce) {
+    html{
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* ----------- CHANGE THE SCROOL BAR DESIGN-------------- */
@@ -171,9 +187,12 @@ nav{
 
 .featured-box{
     position: relative;
-    display: flex;
-    height: 100vh;
-    min-height: 700px;
+    display: grid;
+    grid-template-columns: minmax(420px, 0.95fr) minmax(320px, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 5rem);
+    min-height: 100vh;
+    padding-top: 90px;
 }
 
 /* --------------------featured box ---------------- */
@@ -183,11 +202,12 @@ nav{
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 8rem;
-    min-height: 80vh;
+    margin-top: 0;
+    min-height: auto;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     padding-left: 20px;
+    z-index: 2;
 }
 .featured-text-card span{
     background: var(--third-color);
@@ -197,23 +217,36 @@ nav{
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 50px;
+    font-size: clamp(2.5rem, 4.2vw, 4rem);
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
+    line-height: 1.14;
+    min-height: 2.28em;
+    max-width: 720px;
+}
+.featured-name h1{
+    font: inherit;
+    color: inherit;
+    margin: 0;
 }
 .typedText{
     text-transform: capitalize;
     color: var(--text-color-third);
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 .featured-text-info{
     font-size: 15px;
     margin-bottom: 30px;
     color: var(--text-color-second);
+    max-width: 560px;
 }
 .featured-text-btn{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 14px;
+    max-width: 620px;
 }
 .featured-text-btn>.blue-btn{
     background: var(--first-color);
@@ -221,6 +254,37 @@ nav{
 }
 .featured-text-btn>.blue-btn:hover{
     background: var(--first-color-hover);
+}
+.featured-text-btn>.mentorship-btn{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.mentorship-btn:hover{
+    background: var(--first-color-hover);
+}
+.hero-social-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+.hero-social-links a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--first-color);
+    background: var(--color-white);
+    box-shadow: 0 2px 8px var(--first-shadow-color);
+    transition: .25s;
+}
+.hero-social-links a:hover{
+    color: var(--color-white);
+    background: var(--second-color);
+    transform: translateY(-2px);
 }
 .social_icons{
     display: flex;
@@ -244,21 +308,26 @@ nav{
 
 .featured-image{
     display: flex;
-    justify-content: right;
-    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
     width: 100%;
 }
 .image{
     margin: auto 0;
-    width: 480px;
-    height: 480px;
+    width: clamp(320px, 31vw, 500px);
+    height: clamp(320px, 31vw, 500px);
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
+    box-shadow:
+        0 0 0 6px rgba(11, 61, 119, 0.12),
+        0 0 0 12px rgba(245, 211, 94, 0.08),
+        0 25px 45px rgba(6, 28, 54, 0.25);
 }
 .image img{
-    width: 480px;
-    height: 480px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 @keyframes imgFloat {
@@ -311,7 +380,8 @@ nav{
     text-align: center;
     margin-bottom: 5em;
 }
-.top-header h1{
+.top-header h1,
+.top-header h2{
     font-weight: 600;
     color: var(--text-color-second);
     margin-bottom: 10px;
@@ -493,7 +563,8 @@ h3{
 }
 
 .services_right .description{
-    text-align: justify;
+    text-align: left;
+    line-height: 1.7;
     margin-bottom: .8rem;
 }
 .services_right .description p{
@@ -607,6 +678,43 @@ h3{
     object-fit:fill;
     display: block;
     border-bottom: 1px solid #eee;
+}
+
+.project-card-icon-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    background: linear-gradient(135deg, var(--first-color), var(--first-color-hover));
+}
+
+.project-card-icon-header i {
+    font-size: 3.5rem;
+    color: var(--color-white);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.tech-tag {
+    background: var(--body-color);
+    border: 1px solid var(--first-shadow-color);
+    color: var(--text-color-second);
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.projects-empty,
+.cert-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #999;
+    padding: 2rem;
 }
 
 .project-info {
@@ -806,7 +914,7 @@ h3{
     align-items: center;
     padding: 20px 30px;
     width: 100%;
-    height: 315px;
+    min-height: 350px;
     background: var(--color-white);
     border-radius: 10px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -830,7 +938,7 @@ h3{
     bottom: 0;
 }
 
-.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info h3,
 .contact-info:hover.contact-info p,
 .contact-info:hover.contact-info i{
     color: #fff;
@@ -840,7 +948,7 @@ h3{
     color: rgb(50, 100, 50);
 }
 
-.contact-info h2{
+.contact-info h3{
     color: #1f1818;
     margin-bottom: 20px;
 }
@@ -900,12 +1008,36 @@ textarea{
     background: var(--second-color);
     color: var(--color-white);
 }
+.form-button>.btn:disabled{
+    opacity: .7;
+    cursor: wait;
+}
 .form-button>.btn:hover{
     background: var(--third-color);
 }
 .form-button i{
     font-size: 18px;
     rotate: -45deg;
+}
+.honeypot{
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+.form-status{
+    min-height: 24px;
+    font-size: .92rem;
+    color: var(--text-color-second);
+}
+.form-status.success{
+    color: #1f9d55;
+}
+.form-status.error{
+    color: #b42318;
+}
+.form-status.loading{
+    color: var(--first-color);
 }
 
 
@@ -926,7 +1058,7 @@ textarea{
 
 
 .site-footer {
-    background-color: #1a1a2e; /* Dark navy blue */
+    background-color: #061C36; /* Deep Cyber Navy */
     color: #e0e0e0; /* Light text */
     padding: 40px 20px;
     font-size: 14px;
@@ -973,7 +1105,7 @@ textarea{
     display: block;
     width: 40px;
     height: 2px;
-    background-color: #007bff; /* Accent color for headings */
+    background-color: #F5D35E; /* Gold accent for headings */
     margin-top: 5px;
 }
 
@@ -993,44 +1125,12 @@ textarea{
     transition: color 0.3s ease;
 }
 
+.footer-column p a {
+    color: #F5D35E;
+}
+
 .footer-column ul li a:hover {
-    color: #007bff; /* Hover effect for links */
-}
-
-.app-badges {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-.app-badges img {
-    max-width: 120px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.payment-heading {
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.payment-icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.payment-icons img {
-    max-width: 60px;
-    height: auto;
-    border-radius: 3px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.payment-icons img:hover {
-    opacity: 1;
+    color: #F5D35E; /* Gold hover effect for links */
 }
 
 .footer-bottom {
@@ -1229,11 +1329,6 @@ textarea{
     .social-icons a {
         font-size: 22px;
     }
-
-    .app-badges img,
-    .payment-icons img {
-        max-width: 100px; /* Adjust image sizes for very small screens */
-    }
 }
 /* --------------------MEDIA QUERY == 1024PX / RESPONSIVE */
 @media only screen and (max-width: 1024PX){
@@ -1286,9 +1381,12 @@ textarea{
         justify-content: center;
     }
     .featured-box{
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        min-height: auto;
+        padding-top: 110px;
+        gap: 1.5rem;
 
     }
     .featured-text{
@@ -1296,7 +1394,20 @@ textarea{
         order: 2;
         justify-content: center;
         align-content: flex-start;
-        min-height: 60vh;
+        min-height: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .featured-name{
+        min-height: 2.28em;
+        margin-block: 14px;
+    }
+    .featured-text-info{
+        margin-bottom: 24px;
+    }
+    .featured-text-btn,
+    .hero-social-links{
+        justify-content: center;
     }
     .social_icons{
         margin-top: 2em;
@@ -1306,7 +1417,7 @@ textarea{
         justify-content: center;
         min-height: 15px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 0;
     }
     .image, .image img{
         width: 150px;
@@ -1341,10 +1452,15 @@ textarea{
 
 @media only screen and  (max-width: 540px){
     .featured-name{
-        font-size: 40px;
+        font-size: 1.75rem;
+        line-height: 1.16;
     }
     .featured-image{
-        margin-top: 100px;
+        margin-top: 0;
+    }
+    .featured-text-btn .btn{
+        width: 100%;
+        justify-content: center;
     }
     .project-box{
         width: 100%;
@@ -1566,6 +1682,39 @@ textarea{
     background: var(--body-color);
 }
 
+@media only screen and  (max-width: 400px){
+    .wrapper{
+        padding-inline: 6vw;
+    }
+    .featured-name{
+        font-size: 1.68rem;
+    }
+}
+
+.cert-profile-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: -3rem 0 2rem;
+}
+
+.cert-profile-links a {
+    color: var(--first-color);
+    background: var(--color-white);
+    border: 1px solid var(--first-shadow-color);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px var(--first-shadow-color);
+    transition: .25s;
+}
+
+.cert-profile-links a:hover {
+    color: var(--color-white);
+    background: var(--second-color);
+}
+
 .certification-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1581,9 +1730,48 @@ textarea{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     text-align: center;
     transition: 0.4s;
-    cursor: pointer;
+    cursor: default;
     position: relative;
     overflow: hidden;
+}
+
+.cert-status {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.cert-status-completed { background: #1f9d55; color: #fff; }
+.cert-status-in-progress { background: var(--third-color); color: #1f1818; }
+.cert-status-planned { background: #e9e9e9; color: #666; }
+
+.cert-image {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 10px auto 18px;
+    display: block;
+    background: #fff;
+}
+
+.cert-issuer {
+    font-size: 0.85rem;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+
+.cert-pending-note {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #999;
 }
 
 .cert-card:hover {
